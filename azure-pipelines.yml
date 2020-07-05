@@ -31,5 +31,6 @@ steps:
 
 - script: |
     npm install
-    cypress run
+    npm run cypress:verify
+    npm run cypress:run
   displayName: 'Run tests'
