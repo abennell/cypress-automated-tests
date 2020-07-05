@@ -23,3 +23,16 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+//Add a new library to handle modification of local storage
+import "cypress-localstorage-commands"
+
+//This will give me a new login command I can use in any test which requires the user to be authenticated.
+Cypress.Commands.add('login', () => {
+
+        cy.visit('http://localhost:3000/signin')
+        cy.get('#username').type('Katharina_Bernier')
+        cy.get('#password').type('s3cret')
+        cy.get('form').contains('Sign In').click()
+
+})
