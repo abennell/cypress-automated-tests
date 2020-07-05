@@ -16,8 +16,6 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
-    npm install
-    cypress install
-    node_modules/.bin/cypress open
-    cypress run --spec \”cypress/integration/**/*.spec.js\” // mention your spec file
-  displayName: 'Starting Server'
+    npm install cypress --save-dev
+    cypress run
+  displayName: 'Run tests'
