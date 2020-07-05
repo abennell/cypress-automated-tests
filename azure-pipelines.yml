@@ -17,7 +17,7 @@ steps:
 
 - script: |
     npm install
-    npm cache add /home/vsts/.cache/Cypress
+    cypress install
     node_modules/.bin/cypress open
     cypress run --spec \”cypress/integration/**/*.spec.js\” // mention your spec file
   displayName: 'Starting Server'
