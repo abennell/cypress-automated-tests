@@ -1,6 +1,6 @@
 describe('Login Page tests', function() {
     beforeEach(() => {
-        cy.visit('http://localhost:3000/signin')
+        cy.visit('/signin')
     })
 
     it('should greet with login', function(){

@@ -1,7 +1,7 @@
 describe('Navigation tests', function() {
     beforeEach(() => {
         cy.login()
-        cy.visit('http://localhost:3000')
+        cy.visit('/')
     })
 
     it('should display the user\'s profile picture', function() {
